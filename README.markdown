@@ -227,31 +227,6 @@ cd ../server && npm install
   - Client: Toasts for API errors (e.g., “Todo not found” for `404`).
   - Server: `ReturnError` utility for consistent error responses.
 
-## Troubleshooting
-
-- **Todos Not Updating**:
-  - Check `useDeleteTodo` in `client/src/providers/todos.ts` for `invalidateQueries(['todos', userPid])`.
-  - Verify `currentUser?.pid` in `client/src/context/userContext.tsx`.
-  - Console log: `Invalidating todos for userPid: <pid>`.
-
-- **API Errors**:
-  - Test endpoints:
-    ```bash
-    curl -X DELETE http://localhost:3001/api/todos/valid-pid
-    ```
-  - Check `client/src/providers/todos.ts` logs:
-    ```typescript
-    console.log("Delete Response:", response.status, response.data);
-    ```
-
-- **Database Issues**:
-  - Ensure MongoDB is running and `MONGODB_URI` is correct in `server/.env`.
-  - Check `server/src/config/database.ts`.
-
-- **Build Issues**:
-  - Run `npm run build` in `client` and `server` to catch TypeScript errors.
-  - Verify dependency versions in `package.json`.
-
 ## Contributing
 
 1. Fork the repository.
