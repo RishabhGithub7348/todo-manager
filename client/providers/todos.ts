@@ -257,7 +257,7 @@ export const useDeleteTodo = (userPid?: string) => {
     mutationFn: (pid: string) => deleteTodo(pid, frontendAxios),
     onSuccess: () => {
       // Invalidate todos for the specific user
-      queryClient.invalidateQueries({ queryKey: ['todos', userPid] });
+      queryClient.invalidateQueries({ queryKey: ['todos'] });
     },
     onError: (error) => {
       console.error("Delete todo error:", error);
