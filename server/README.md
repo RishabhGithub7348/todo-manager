@@ -1,4 +1,4 @@
-# Todo App
+# Todo App - Backend
 
 A RESTful API for managing todos and notes, built with TypeScript, Express, Mongoose, and MongoDB. Users can create, update, delete, and toggle todos, add notes to todos, and export their data. The application supports user mentions and tags for collaboration.
 
