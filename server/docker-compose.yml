@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env # Load environment variables from .env file
+    depends_on:
+      mongo:
+        condition: service_healthy # Wait for MongoDB to be healthy
+    volumes:
+      - .:/app # Optional for development
+    networks:
+      - app-network
+
+  mongo:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rishabh
+      - MONGO_INITDB_ROOT_PASSWORD=rishabh
+      - MONGO_INITDB_DATABASE=secret-echo
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+
+networks:
+  app-network:
+    driver: bridge
