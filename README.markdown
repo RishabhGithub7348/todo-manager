@@ -16,6 +16,19 @@ This is a full-stack todo management application with a **Next.js** frontend (`c
 - **Error Handling**: User-friendly error messages via toasts.
 - **Backend API**: RESTful API with endpoints for todos, users, and notes, returning success messages (e.g., `{ message: "Successfully deleted" }` for deletions).
 
+## Documentary Video
+
+To learn more about Todo App and see a walkthrough of its features, watch documentary video:
+
+### Watch the Todo App Documentary Video
+
+[![alt text](https://github.com/user-attachments/assets/d86c3df5-0a92-4337-9e67-80e21532e59b)](https://www.youtube.com/watch?v=UtjL0reOm9c)
+
+
+## Deployed on Railway.app :  [Todo](https://todo-manger-frontend-production.up.railway.app/)
+
+
+
 ## Tech Stack
 
 ### Client (Frontend)
@@ -27,12 +40,18 @@ This is a full-stack todo management application with a **Next.js** frontend (`c
 - **Context**: React Context API (`UserContext`)
 - **Styling**: Tailwind CSS
 
+## Detailed Documentation of [Todo - Frontend](./client/README.md)
+
+
 ### Server (Backend)
 - **Framework**: Express.js
 - **Language**: TypeScript
 - **Database**: MongoDB (assumed, customizable)
 - **ORM/ODM**: Mongoose (assumed)
 - **HTTP Server**: Node.js
+
+## Detailed Documentation of [Todo - Backend](./server/README.md)
+
 
 ## Prerequisites
 
@@ -227,14 +246,10 @@ cd ../server && npm install
   - Client: Toasts for API errors (e.g., “Todo not found” for `404`).
   - Server: `ReturnError` utility for consistent error responses.
 
-## Contributing
-
-1. Fork the repository.
-2. Create a branch: `git checkout -b feature-name`.
-3. Commit changes: `git commit -m "Add feature"`.
-4. Push: `git push origin feature-name`.
-5. Open a pull request.
-
 ## License
 
-MIT License. See `LICENSE` for details.
+This project is licensed under the MIT License for the frontend and the ISC License for the backend.
+## Contact
+
+For questions or support, reach out to [Rishabh Maurya](mailto:rishabhmaurya7654@gmail.com).
+
