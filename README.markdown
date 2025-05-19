@@ -1,4 +1,4 @@
-# Todo App
+# Todo Manager WebApp
 
 This is a full-stack todo management application with a **Next.js** frontend (`client`) and an **Express** backend (`server`). Users can create, update, delete, and manage todos, add notes, filter tasks, sort them, and export them as CSV. The app supports user-specific todo lists and provides real-time updates using React Query.
 
